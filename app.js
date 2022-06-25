@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cors({origin: 'https://pic-n-read.herokuapp.com'}));
+app.use(cors({origin: 'https://pic-n-read.netlify.app'}));
 app.use('/', indexRouter);
 app.use('/', keyRouter);
 
