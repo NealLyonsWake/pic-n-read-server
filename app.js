@@ -7,7 +7,7 @@ const path = require('path');
 const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
-const keyRouter = require('./routes/key')
+const keyRouter = require('./routes/key');
 
 const app = express();
 
@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(cors({origin: 'https://pic-n-read.netlify.app'}));
+// app.use(cors({origin: 'http://127.0.0.1:5500'})); For development
 app.use('/', indexRouter);
 app.use('/', keyRouter);
 
